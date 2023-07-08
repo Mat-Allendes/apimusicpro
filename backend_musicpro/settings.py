@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'backend_musicpro.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='mysql://root:123456@localhost:3306/bodega_api',
+        default='mysql://123456@localhost:3306/bodega_api',
         conn_max_age=600
     )
 }
