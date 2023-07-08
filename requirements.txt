@@ -2,6 +2,7 @@ asgiref==3.6.0
 astroid==2.15.4
 colorama==0.4.6
 dill==0.3.6
+dj-database-url==2.0.0
 Django==4.1
 django-bootstrap5==23.1
 django-filter==23.2
