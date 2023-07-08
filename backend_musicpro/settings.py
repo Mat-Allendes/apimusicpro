@@ -83,14 +83,11 @@ WSGI_APPLICATION = 'backend_musicpro.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bodega_api',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
+    'default': dj_database_url.parse(
+        'mysql://root:123456@localhost:3306/bodega_api',
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 }
 
 
