@@ -1,5 +1,6 @@
 asgiref==3.6.0
 astroid==2.15.4
+Brotli==1.0.9
 colorama==0.4.6
 dill==0.3.6
 dj-database-url==2.0.0
@@ -26,6 +27,7 @@ tomli==2.0.1
 tomlkit==0.11.8
 typing_extensions==4.5.0
 tzdata==2023.3
+whitenoise==6.5.0
 wrapt==1.15.0
 zope.component==6.0
 zope.deferredimport==4.4
