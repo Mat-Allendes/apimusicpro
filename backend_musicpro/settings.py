@@ -26,7 +26,7 @@ SECRET_KEY = 'TaoVr}A{|k?oRJE%0{b3"Zc~/cXTil'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '20ad-2800-300-6313-c380-00-2.ngrok-free.app']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '97ee-2800-300-6313-c380-00-2.ngrok-free.app']
 
 # Application definition
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'guardian',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'backend_musicpro.urls'
@@ -139,3 +141,30 @@ AUTHENTICATION_BACKENDS = [
 
 
 AUTH_USER_MODEL = 'api.CustomUser'
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8100',  # Agrega aquí el origen permitido
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
+CORS_ALLOW_CREDENTIALS = True

@@ -18,6 +18,7 @@ class Producto(models.Model):
         ('Pianolas', 'Pianolas')
     )
     id = models.AutoField(primary_key=True)
+    imagen_url = models.CharField(max_length=200, blank=True)
     nombre = models.CharField(max_length=100)
     marca = models.CharField(max_length=100)
     serie = models.CharField(max_length=100)
